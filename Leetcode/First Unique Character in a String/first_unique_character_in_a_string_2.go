@@ -17,8 +17,6 @@ func firstUniqChar(s string) int {
 
 	}
 
-	fmt.Println(letters)
-
 	idx := len(s)
 	for _, v := range letters {
 		if v.qt == 1 && v.i < idx {
