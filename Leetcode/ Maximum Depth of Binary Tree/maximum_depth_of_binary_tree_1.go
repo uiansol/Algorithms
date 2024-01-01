@@ -1,18 +1,14 @@
-// Accepted  0 ms  4.5 MB
+// Accepted  3 ms  4.4 MB
 
 func maxDepth(root *TreeNode) int {
-	return solve(root, 1)
-}
-
-func solve(node *TreeNode, deep int) int {
 	deepLeft, deepRight := 0, 0
 
-	if node == nil {
+	if root == nil {
 		return 0
 	}
 
-	deepLeft = 1 + solve(node.Left, deep)
-	deepRight = 1 + solve(node.Right, deep)
+	deepLeft = maxDepth(root.Left)
+	deepRight = maxDepth(root.Right)
 
-	return max(deepLeft, deepRight)
+	return max(deepLeft, deepRight) + 1
 }
