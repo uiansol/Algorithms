@@ -1,4 +1,4 @@
-// Accepted  31 ms  6.02 MB
+// Accepted  15 ms  6 MB
 
 func isPowerOfThree(n int) bool {
 	if n <= 0 {
