@@ -8,7 +8,7 @@ func sortedSquares(nums []int) []int {
 			temp = append(temp, squared)
 			idx += 1
 		} else {
-			for idx >= 0 && squared > temp[idx] && idx >= 0 {
+			for idx >= 0 && squared > temp[idx] {
 				nums[nIdx] = temp[idx]
 				nIdx++
 				idx--
